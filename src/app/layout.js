@@ -1,6 +1,12 @@
 import localFont from "next/font/local";
-import "./globals.css";
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import "./globals.css";
+import Loading from "./loading"
+import {  Suspense } from 'react';
+import Navbar from "@/component/Navbar";
+import Footer from "@/component/Footer";
+// @import ‘bootstrap/dist/css/bootstrap.min.css’;
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -21,7 +27,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <Suspense fallback={<Loading />}>
+          {/* <h2>Preview</h2> */}
+          <Navbar/>
+          {children}
+          <Footer/>
+        </Suspense>
+        
       </body>
     </html>
   );

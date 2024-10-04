@@ -1,0 +1,22 @@
+/* Footer.module.css */
+
+.footerContainer {
+    display: flex;                /* Enable flexbox layout */
+    justify-content: center;      /* Center horizontally */
+    align-items:last baseline;          /* Center vertically */
+    height: 25vh;                /* Full viewport height */
+    background-color: #f8f9fa;    /* Optional: set a background color */
+  }
+
+  .cardBody{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .h5{
+    display: flex;
+    justify-content: center;
+    color: aqua;
+  }
+  
