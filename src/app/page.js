@@ -4,12 +4,13 @@ import styles from "./page.module.css";
 import { Button, Flex } from "antd";
 import Carou from "@/component/carou";
 import { useRouter } from "next/navigation";
+import Navbar from "@/component/Navbar";
 
 export default function Home() {
    const router=useRouter();
   return (
     <>
-    
+    <Navbar/>
      <div className={styles.page}>
       <div className={styles.header}>
         <h1>Satmile High School</h1>
