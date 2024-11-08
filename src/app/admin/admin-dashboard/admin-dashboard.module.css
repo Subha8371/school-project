@@ -1,0 +1,232 @@
+/* admin-dashboard.module.css */
+.adminDashboard {
+    display: flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+    margin: 10px;
+  }
+  
+  .openModalButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #2a7e09;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .openModalButton:hover {
+    background-color: #009eb3;
+  }
+  
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .modalForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .modalForm label {
+    font-size: 1em;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modalForm input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .modalActions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .submitButton, .closeButton {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .submitButton {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .submitButton:hover {
+    background-color: #218838;
+  }
+  
+  .closeButton {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .closeButton:hover {
+    background-color: #c82333;
+  }
+  
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table, .table th, .table td {
+  border: 1px solid #ddd;
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.table td {
+  background-color: #f9f9f9;
+}
+
+.table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover td {
+  background-color: #e9e9e9;
+}
+/* Divider Styles for rows */
+.table tr {
+  border-bottom: 1px solid #ddd; /* Divider between rows */
+}
+
+.table tr:last-child {
+  border-bottom: none; /* Remove divider after the last row */
+}
+
+
+/* Error message container styling */
+.error {
+  color: red;
+  font-size: 0.875rem; /* Slightly smaller text */
+  font-weight: 500; /* Bold text for emphasis */
+  margin-top: 0.25rem; /* Space between the input and the error message */
+  display: block; /* Ensures the error message is displayed below the input field */
+  clear: both; /* Clears any float elements to make sure it stacks properly */
+}
+
+/* Optional: Error icon styling */
+.errorIcon {
+  margin-right: 0.5rem; /* Space between the icon and error message */
+  color: red;
+  font-size: 1.2rem;
+  vertical-align: middle; /* Aligns the icon with the text */
+}
+
+
+/*table button edit and delete are styled*/
+.table button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.table button.edit-btn {
+  background-color: #2a7e09; /* Green */
+  color: white;
+}
+
+.table button.delete-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.table button.edit-btn:hover {
+  background-color: #45a049;
+}
+
+.table button.delete-btn:hover {
+  background-color: #e53935;
+}
+
+
+
+/*dropdown style*/
+/* Input and select styles for uniform size */
+.selectDropdown {
+  width: 100%;             /* Set width to fill the container */
+  padding: 10px;            /* Adjust padding for consistent height */
+  font-size: 1em;           /* Same font size */
+  border: 1px solid #ccc;   /* Matching border style */
+  border-radius: 5px;       /* Rounded corners */
+  box-sizing: border-box;   /* Ensures padding doesn’t affect width */
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Additional styling for dropdown */
+.selectDropdown {
+  background-color: #f9f9f9;
+  appearance: none;         /* Removes default arrow for consistency */
+  cursor: pointer;
+}
+
+/* Error message styling remains the same */
+.error {
+  color: red;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+  display: block;
+  clear: both;
+}
+
+.errorIcon {
+  margin-right: 0.5rem;
+  color: red;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}

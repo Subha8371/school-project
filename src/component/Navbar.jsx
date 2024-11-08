@@ -1,7 +1,18 @@
+"use client";
 import Link from "next/link";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { logout } from "@/utils/logout";
 const Navbar = () => {
+  const [token, setToken] = useState(null);
+  const router = useRouter();
+
+  useEffect(() => {
+    const storedToken = localStorage.getItem("token");
+    setToken(storedToken);
+  }, []);
+
+
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -32,57 +43,10 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" href="/">
-                 Notice
-                </Link>
-              </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  href="/"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                 Admission
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      Action
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      Another action
-                    </Link>
-                  </li>
-                  {/* <li><hr className="dropdown-divider"></li> */}
-                  <li>
-                    <Link className="dropdown-item" href="/">
-                      Something else here
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link disabled" aria-disabled="false" href="/">
-                 Result
-                </Link>
-              </li>
+            
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            
+            
           </div>
         </div>
       </nav>
